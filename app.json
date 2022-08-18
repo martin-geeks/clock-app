@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "LearnNative",
-    "slug": "LearnNative",
+    "name": "Zeiro Clock",
+    "slug": "zeiro-clock",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "owner": "martintembo1",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -24,7 +25,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.martintembo1.zeiroclock"
     },
     "web": {
       "favicon": "./assets/favicon.png"
