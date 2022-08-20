@@ -4,6 +4,7 @@ import {Button, StyleSheet, Text, View } from 'react-native';
 import SnackBar from './components/SnackBar';
 import AppBar from './components/AppBar';
 import MainClock from './components/MainClock';
+import StopWatch from './components/StopWatch';
 //import SetAlarm from './components/SetAlarm';
 import MyAlarm from './components/MyAlarm';
 import {Provider as PaperProvider } from 'react-native-paper';
@@ -59,8 +60,15 @@ export default function App() {
           const title = getHeaderTitle(options,route.name);
             return <AppBar back={back} navigation={navigation} />
           } }} />
-          <Stack.Screen name='MyAlarm' component={MyAlarm} options={{title:'My Alarm'}}/>
+          <Stack.Screen name='MyAlarm' component={MyAlarm} options={{title:'Alarm',header: ({navigation,route,options,back})=> {
+          const title = getHeaderTitle(options,route.name);
+            return <AppBar back={back} navigation={navigation} />
+          } }} />
           <Stack.Screen name='SetAlarm' component={SetAlarm} options={{title:'Set Alarm'}}/>
+          <Stack.Screen name='StopWatch' component={StopWatch} options={{title:'StopWatch',header: ({navigation,route,options,back})=> {
+          const title = getHeaderTitle(options,route.name);
+            return <AppBar back={back} navigation={navigation} />
+          } }} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style={styles.statusBar} hidden={false} />

@@ -90,16 +90,17 @@ export default function MainClock({ navigation }){
     }
     if((hours === 0) && (minutes === 0) && (seconds === 0) ) {
       //Nothing to output
-      const ply = async () =>{
-        await sound.play();
-      }
-      ply();
+      
     }
   
-  },200);
+  },50000000);
+  setCountdown(myCountdown);
   return myCountdown;
   }
-  
+  const ply = async () =>{
+        await play();
+  }
+
   return (
     
     <>
@@ -114,19 +115,22 @@ export default function MainClock({ navigation }){
       </Text>
       <Text style={{justifyContent:'center',textAlign:'center', marginTop:'5%'}} variant="displayLarge">{currentTime}</Text>
       <View style={styles.bottomView}>
+      <Button onPress={() => ply()} >
+        TEST
+      </Button >
         <Text variant='labelLarge'>
           Recent Activities
         
 
         </Text>
         <FlatList 
-        data = {[{icon:'alarm',time:'12:50',title:'Alarm'},{icon:'alarm',time:'00:67',title:'Alarm'},{icon:'timer',time:'09:35',title:'Stop Watch',date:"August 18, 2022 11:20:25"}]}
+        data = {[{icon:'alarm',time:'12:50',title:'Alarm'},{icon:'alarm',time:'00:67',title:'Alarm'},{icon:'timer',time:'09:35',title:'Stop Watch',date:"August 19, 2022 00:20:25"}]}
         renderItem={({item}) => <View style={styles.item} >
         <View style={{disply:'flex',flexDirection:'row'}}>
         <Button icon={item.icon} />
         <Text variant='titleLarge' >{item.title}</Text>
         </View>
-        { item.icon=== 'timer'? <Text variant='titleLarge'>{handleStopWatch(item.date)}</Text>:<Text variant='titleLarge' >{item.time}</Text>}
+        { item.icon=== 'timer'? <Text variant='titleLarge'>{item.date}</Text>:<Text variant='titleLarge' >{item.time}</Text>}
         
         </View>}
         />
