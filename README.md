@@ -1,6 +1,7 @@
-# clock-app
+## Clock App
 A clock app built in Typescript using React Native 
-Clone the application by copying the code below
+
+- Clone the application by copying the code below
 ```
 git clone https://github.com/martin-geeks/clock-app.git
 cd clock-app
