@@ -33,6 +33,6 @@ enter
 Follow the instructions here [React Native Development Environment](https://reactnative.dev/docs/environment-setup)
 - Enter a on the console for android build 
 - Enter I on the console for iOS build
-#### using Expo
+#### Using Expo
 Download the expo app here: [iOS/Android](https://expo.dev/client)
 Enter the link shown in the console e.g exp://127.0.0.0:9000
